@@ -1,15 +1,10 @@
-
-
 name: Testing the reusbale workflows
 
 on:
   push:
-    branches: '**'
+    branches: "**"
 jobs:
   test_workflows:
-    uses: jeeshan12/resusable_workflows/.github/workflows/setup-workspace.yml@main
+    uses: jeeshan12/resusable_workflows/.github/workflows/setup-workspace.yml@v1.0.2
     with:
       fileName: testng.xml
-         
-      
- 
