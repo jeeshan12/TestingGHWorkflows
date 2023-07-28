@@ -5,7 +5,13 @@ on:
     branches: "**"
 jobs:
   test_workflows:
-    uses: jeeshan12/resusable_workflows/.github/workflows/setup-workspace.yml@v2.0.6
-    secrets: inherit
-    with:
-      working-directory: .
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      - name: Set up workspace
+        uses: jeeshan12/resusable_workflows/.github/actions/setup/workspace/action.yaml@v2.0.4
+        with:
+          language: "node"
+          version: "14.x"
