@@ -1,0 +1,17 @@
+name: Testing the reusbale workflows for building tags
+
+on:
+  push:
+    branches: "**"
+jobs:
+  test_workflows:
+    uses: jeeshan12/resusable_workflows/.github/workflows/build-tags.yml@v2.0.7
+    with:
+      working-directory: .
+      role: "23232323"
+      aws_region: "us-east-2"
+  print-tags:
+    runs-on: ubuntu-latest
+    needs: test_workflows
+    steps:
+      - run: echo ${{ needs.test_workflows.outputs.tag-name}}
