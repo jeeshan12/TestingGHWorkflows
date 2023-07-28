@@ -5,7 +5,7 @@ on:
     branches: "**"
 jobs:
   test_workflows:
-    uses: jeeshan12/resusable_workflows/.github/workflows/setup-workspace.yml@v2.0.4
+    uses: jeeshan12/resusable_workflows/.github/workflows/setup-workspace.yml@v2.0.5
     secrets: inherit
     with:
       working-directory: .
