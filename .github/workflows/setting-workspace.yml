@@ -5,11 +5,7 @@ on:
     branches: "**"
 jobs:
   test_workflows:
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: Set up workspace
-        uses: jeeshan12/resusable_workflows/.github/workflows/setup-workspace.yml@v2.0.5
-        with:
-          language: "node"
-          version: "14.x"
+ 
+       uses: jeeshan12/resusable_workflows/.github/workflows/setup-workspace.yml@v2.0.6
+       with:
+         working-directory: .
